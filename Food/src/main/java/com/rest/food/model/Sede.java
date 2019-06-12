@@ -14,8 +14,6 @@ import lombok.Data;
 @Table(name="sede")
 @Data
 public class Sede {
-
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;

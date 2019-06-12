@@ -17,7 +17,6 @@ import lombok.Data;
 public class Administrador {
 
 	@Id
-	@Size(min=8, message = "El DNI debe tener un mínimo de 8 digitos")
 	@Column(name="dni", nullable=false, length=8)
 	private Integer dni;
 	

@@ -17,13 +17,14 @@ import lombok.Data;
 public class Cliente {
 	
 	@Id
+	@Column(name="dni", nullable=false, length=8)
 	private Integer dni;
 	
 	@Column(name="nombre", nullable=false, length=30)
 	private String nombre;
 	
-	@Size(min=1, message="Solo se puede ingresar un dígito")
-    @Column(name="tipo", nullable=false, length=1)
+	//@Size(min=1, message="Solo se puede ingresar un dígito")
+    @Column(name="tipo", nullable=false)
 	private int tipo;
 	
 	@Size(min=8, message="La contraseña debe tener un mínimo de 8 caracteres")
