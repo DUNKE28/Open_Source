@@ -140,3 +140,32 @@
 2019-06-17 17:02:54,888 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-06-17 17:02:54,891 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-06-17 17:02:54,892 [Worker-14: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USUARIO\Desktop\Open_Source\Food\src\test\resources
+2019-06-18 12:21:35,340 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-18 12:22:23,638 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:22:23,793 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-18 12:22:23,809 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-18 12:22:23,812 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:22:23,812 [Worker-7: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USUARIO\Desktop\Open_Source\Food\src\test\resources
+2019-06-18 12:44:50,087 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:44:50,121 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-18 12:44:50,124 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-18 12:44:50,126 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:44:50,126 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USUARIO\Desktop\Open_Source\Food\src\test\resources
+2019-06-18 12:45:14,078 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-06-18 12:45:17,612 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.rest:Food:0.0.1-SNAPSHOT @ C:\Users\USUARIO\Desktop\Open_Source\Food\pom.xml.
+2019-06-18 12:45:20,807 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food/src/main/java
+2019-06-18 12:45:20,808 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food/src/main/resources
+2019-06-18 12:45:20,810 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Food/src/main/resources
+2019-06-18 12:45:20,812 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Food/src/test/java
+2019-06-18 12:45:21,635 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 7 sec
+2019-06-18 12:45:24,127 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:45:24,128 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-06-18 12:45:24,144 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-06-18 12:45:24,146 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-06-18 12:45:24,147 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USUARIO\Desktop\Open_Source\Food\src\test\resources
+2019-06-18 12:45:46,715 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2019-06-18 12:45:47,196 [Worker-1: Launching Food] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\USUARIO\Desktop\Open_Source\Food
+2019-06-18 12:45:47,197 [Worker-1: Launching Food] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install spring-boot:run -Dstyle.color=always
+2019-06-18 12:54:29,457 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2019-06-18 12:54:29,675 [Worker-14: Launching Food] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\USUARIO\Desktop\Open_Source\Food
+2019-06-18 12:54:29,675 [Worker-14: Launching Food] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install spring-boot:run -Dstyle.color=always

@@ -26,7 +26,7 @@ public class Menu {
 	@Column(name="nombre", nullable=false, length=15)
 	private String nombre;
 	
-	@Column(name="horaEntrega", nullable=false)
+	@Column(name="fecha", nullable=false)
 	@Temporal(TemporalType.TIME)
 	private Date fecha;
 	
