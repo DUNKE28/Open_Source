@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,9 +27,9 @@ public class Menu {
 	private String nombre;
 	
 	@Column(name="fecha", nullable=false)
-	@Temporal(TemporalType.TIME)
+	@Temporal(TemporalType.DATE)
 	private Date fecha;
 	
-	@OneToMany(mappedBy="menu")
-	private List<MenuInsumo> menuInsumos;
+	@ManyToMany
+	private List<Insumo> insumos;
 }

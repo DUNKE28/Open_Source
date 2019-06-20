@@ -46,6 +46,6 @@ public class Orden {
 	@JoinColumn(name="cliente_id", nullable=false)
 	private Cliente cliente;
 	
-	@OneToMany(mappedBy="orden")
+	@OneToMany
 	private List<DetalleOrden> detallesOrden;
 }

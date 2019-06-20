@@ -46,4 +46,5 @@ public class InsumoServiceImpl implements IInsumoService{
 	public List<Insumo> listar() {
 		return insumoRepository.findAll();
 	}
+	
 }

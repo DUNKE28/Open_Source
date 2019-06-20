@@ -1,13 +1,10 @@
 package com.rest.food.model;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -30,13 +27,4 @@ public class Insumo {
 	@Size(min=1, message="Solo se puede ingresar un dígito")
     @Column(name="tipo", nullable=false, length=1)
 	private int tipo;
-	
-	@OneToMany(mappedBy="insumo")
-	private List<MenuInsumo> menuInsumos;
-	
-	@OneToMany(mappedBy="insumo")
-	private List<PlatosFavoritos> platosFavoritos;
-	
-	@OneToMany(mappedBy="insumo")
-	private List<DetalleOrden> detallesOrden;
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -23,7 +23,6 @@ public class Cliente {
 	@Column(name="nombre", nullable=false, length=30)
 	private String nombre;
 	
-	//@Size(min=1, message="Solo se puede ingresar un dígito")
     @Column(name="tipo", nullable=false)
 	private int tipo;
 	
@@ -31,10 +30,7 @@ public class Cliente {
 	@Column(name="contraseña", nullable=false, length=15)
 	private String contraseña;
 	
-	@OneToMany(mappedBy="cliente")
-	private List<Orden> ordenes;
-	
-	@OneToMany(mappedBy="cliente")
-	private List<PlatosFavoritos> platosFavoritos;
+	@ManyToMany
+	private List<Insumo> platosFavoritos;
 
 }
