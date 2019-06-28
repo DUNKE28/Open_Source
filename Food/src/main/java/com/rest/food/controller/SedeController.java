@@ -23,7 +23,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.rest.food.Exception.ModelNotFoundException;
 import com.rest.food.controller.service.ISedeService;
-import com.rest.food.model.Cliente;
 import com.rest.food.model.Sede;
 
 import io.swagger.annotations.Api;
@@ -42,7 +41,7 @@ public class SedeController {
 	@ApiOperation(value="Crear Sede", notes="Servicio para crear una nueva Sede")
 	@ApiResponses(value= {@ApiResponse(code=201, message="Sede creada correctamente"),
 						  @ApiResponse(code=400, message="Solicitud Inválida")})
-	public ResponseEntity<Cliente> registrar(@Valid @RequestBody Sede sede){
+	public ResponseEntity<Sede> registrar(@Valid @RequestBody Sede sede){
 		Sede sedeNew = new Sede();
 		sedeNew = sedeService.registrar(sede);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -54,9 +53,9 @@ public class SedeController {
 	@ApiOperation(value="Actualizar Sede", notes="Servicio para actualizar una sede")
 	@ApiResponses(value= {@ApiResponse(code=201, message="Sede actualizada correctamente"),
 						  @ApiResponse(code=404, message="Sede no encontrada")})
-	public ResponseEntity<Cliente> actualizar(@Valid @RequestBody Sede sede){
+	public ResponseEntity<Sede> actualizar(@Valid @RequestBody Sede sede){
 		sedeService.modificar(sede);
-		return new ResponseEntity<Cliente>(HttpStatus.OK);
+		return new ResponseEntity<Sede>(HttpStatus.OK);
 	}
 	
 	

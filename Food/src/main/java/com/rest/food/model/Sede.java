@@ -1,14 +1,19 @@
 package com.rest.food.model;
 
-import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -22,7 +27,7 @@ public class Sede {
 	
 	@Column(name="nombre", nullable=false, length=15)
 	private String nombre;
-	
-	@OneToMany
-	private List<Menu> menus;
+
+	@ManyToMany(targetEntity = Menu.class)
+	private Set<Menu> menus;
 }

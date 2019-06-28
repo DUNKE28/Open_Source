@@ -7,7 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -26,6 +29,13 @@ public class DetalleOrden {
 	private int cantidad;
 	
 	@ManyToOne
-	@JoinColumn(name="insumo_id", nullable=false)
+	@JoinColumn(name="insumo_id")
 	private Insumo insumo;
+	
+	@ManyToOne
+	@JoinColumn(name="orden_id")
+	private Orden orden;
+
+	@OneToOne
+	private DetalleComprobante detalleComprobante;
 }

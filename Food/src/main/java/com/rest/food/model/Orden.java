@@ -3,8 +3,10 @@ package com.rest.food.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,8 +14,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import lombok.Data;
 
@@ -26,26 +26,24 @@ public class Orden {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name="fecha", nullable=false)
-	@Temporal(TemporalType.DATE)
+	@Column(name="fecha")
 	private Date fecha;
 	
-	@Column(name="horaEntrega", nullable=false)
-	@Temporal(TemporalType.TIME)
+	@Column(name="horaEntrega")
 	private Date horaEntrega;
 	
 
-	@Column(name="estado", nullable=false, length=1)
+	@Column(name="estado", length=1)
 	private int estado;
 	
 	@ManyToOne
-	@JoinColumn(name="sede_id", nullable=false)
+	@JoinColumn(name="sede_id")
 	private Sede sede;
 	
 	@ManyToOne
-	@JoinColumn(name="cliente_id", nullable=false)
+	@JoinColumn(name="cliente_id")
 	private Cliente cliente;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "orden", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<DetalleOrden> detallesOrden;
 }

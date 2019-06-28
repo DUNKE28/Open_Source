@@ -2,10 +2,13 @@ package com.rest.food.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -29,6 +32,9 @@ public class Cliente {
 	@Size(min=8, message="La contraseña debe tener un mínimo de 8 caracteres")
 	@Column(name="contraseña", nullable=false, length=15)
 	private String contraseña;
+	
+	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Orden> ordenes;
 	
 	@ManyToMany
 	private List<Insumo> platosFavoritos;
