@@ -23,6 +23,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.rest.food.Exception.ModelNotFoundException;
 import com.rest.food.controller.service.IOrdenService;
+import com.rest.food.model.Menu;
 import com.rest.food.model.Orden;
 
 import io.swagger.annotations.Api;
@@ -45,9 +46,7 @@ public class OrdenController {
 		public ResponseEntity<Orden> registrar(@Valid @RequestBody Orden orden){
 			Orden ordenNew = new Orden();
 			ordenNew = ordenService.registrar(orden);
-			URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-					.path("/{id}").buildAndExpand(ordenNew.getId()).toUri();
-			return ResponseEntity.created(location).build();
+			return new ResponseEntity<Orden>(ordenNew,HttpStatus.OK);
 		}
 		
 		//----MODIFICAR

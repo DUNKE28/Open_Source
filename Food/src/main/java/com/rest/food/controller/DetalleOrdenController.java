@@ -24,6 +24,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.rest.food.Exception.ModelNotFoundException;
 import com.rest.food.controller.service.IDetalleOrdenService;
 import com.rest.food.model.DetalleOrden;
+import com.rest.food.model.Insumo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -44,9 +45,7 @@ public class DetalleOrdenController {
 	public ResponseEntity<DetalleOrden> registrar(@Valid @RequestBody DetalleOrden detalleOrden){
 		DetalleOrden detalleOrdenNew = new DetalleOrden();
 		detalleOrdenNew = detalleOrdenService.registrar(detalleOrden);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-				.path("/{id}").buildAndExpand(detalleOrdenNew.getId()).toUri();
-		return ResponseEntity.created(location).build();
+		return new ResponseEntity<DetalleOrden>(detalleOrdenNew,HttpStatus.OK);
 	}
 	
 	@PutMapping

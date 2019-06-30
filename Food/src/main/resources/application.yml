@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/FoodDB
+    url: jdbc:postgresql://localhost:5433/FoodDB
     username: postgres
-    password: admin
+    password: 123456789ok
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql

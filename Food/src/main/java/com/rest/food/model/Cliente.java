@@ -12,6 +12,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Data;
 
 @Entity
@@ -33,9 +35,10 @@ public class Cliente {
 	@Column(name="contraseña", nullable=false, length=15)
 	private String contraseña;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Orden> ordenes;
-	
+	@JsonIgnore
 	@ManyToMany
 	private List<Insumo> platosFavoritos;
 

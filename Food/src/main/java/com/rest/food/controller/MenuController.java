@@ -45,10 +45,8 @@ public class MenuController {
 	
 	public ResponseEntity<Menu> registrar(@Valid @RequestBody Menu menu){
 		Menu menuNew = new Menu();
-		menuNew = menuService.registrar(menu);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-				.path("/{id}").buildAndExpand(menuNew.getId()).toUri();
-		return ResponseEntity.created(location).build();
+		menuNew = menuService.registrar(menu);	
+		return new ResponseEntity<Menu>(menuNew,HttpStatus.OK);
 	}
 	
 	@PutMapping

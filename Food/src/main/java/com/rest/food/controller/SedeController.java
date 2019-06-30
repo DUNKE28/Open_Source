@@ -23,6 +23,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.rest.food.Exception.ModelNotFoundException;
 import com.rest.food.controller.service.ISedeService;
+import com.rest.food.model.Orden;
 import com.rest.food.model.Sede;
 
 import io.swagger.annotations.Api;
@@ -44,9 +45,7 @@ public class SedeController {
 	public ResponseEntity<Sede> registrar(@Valid @RequestBody Sede sede){
 		Sede sedeNew = new Sede();
 		sedeNew = sedeService.registrar(sede);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-				.path("/{id}").buildAndExpand(sedeNew.getId()).toUri();
-		return ResponseEntity.created(location).build();
+		return new ResponseEntity<Sede>(sedeNew,HttpStatus.OK);
 	}
 	
 	@PutMapping

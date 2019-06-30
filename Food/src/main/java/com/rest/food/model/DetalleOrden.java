@@ -32,7 +32,7 @@ public class DetalleOrden {
 	@JoinColumn(name="insumo_id")
 	private Insumo insumo;
 	
-	@ManyToOne
+	@ManyToOne	
 	@JoinColumn(name="orden_id")
 	private Orden orden;
 

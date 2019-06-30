@@ -24,6 +24,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.rest.food.Exception.ModelNotFoundException;
 import com.rest.food.controller.service.IAdministradorService;
 import com.rest.food.model.Administrador;
+import com.rest.food.model.Cliente;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -46,9 +47,7 @@ public class AdministradorController {
 	public ResponseEntity<Administrador> registrar(@Valid @RequestBody Administrador administrador){
 		Administrador administradorNew = new Administrador();
 		administradorNew = administradorService.registrar(administrador);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-				.path("/{id}").buildAndExpand(administradorNew.getDni()).toUri();
-		return ResponseEntity.created(location).build();
+		return  new ResponseEntity<Administrador>(administradorNew,HttpStatus.OK);
 	}
 	
 	//----MODIFICAR
